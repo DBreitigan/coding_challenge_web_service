@@ -1,14 +1,16 @@
 //Type node index.js to run
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
+//Use nodemon index.js to auto-reload when changes are made
+// if nodemon isnt installed: npm install -g nodemon
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 
 //use bodyParser() to let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  res.send('Hello World!');
 });
 
 app.post('/', function (req, res) {
